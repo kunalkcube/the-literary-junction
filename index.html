@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Literary Junction</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ===== Header ===== -->
+    <header>
+        <!-- ===== Navbar ===== -->
+        <nav>
+            <div class="nav_logo">
+                <img src="assets/literarylogo.png" alt="">
+            </div>
+            <div class="nav_menu">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <button class="nav_button">Login<i class="ri-login-box-line"></i></button>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu_toggle">
+                <i class="ri-menu-3-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ===== Modal ===== -->
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close-button"><i class="ri-close-line"></i></span>
+                <div class="forms">
+                    <!-- ===== Login Form ===== -->
+                    <form action="login.php" method="post" class="login_form">
+                        <div class="form_input">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+                        </div>
+                        <div class="form_input">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" placeholder="Enter Your Password"
+                                required>
+                        </div>
+                        <button type="submit">Login</button>
+                        <div class="switch">Don't have an account?<span class="switch_form">Create a new account</span>
+                        </div>
+                    </form>
+                    <!-- ===== Signup Form ===== -->
+                    <form action="" method="post" class="signup_form" style="display: none;">
+                        <div class="form_input">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+                        </div>
+                        <div class="form_input">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+                        </div>
+                        <div class="form_input">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" placeholder="Enter Your Password"
+                                required>
+                        </div>
+                        <div class="form_input">
+                            <label for="cpassword">Confirm Password</label>
+                            <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password"
+                                required>
+                        </div>
+                        <button type="submit">Signup</button>
+                        <div class="switch">Already have an account?<span class="switch_form">Login</span></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- ===== Home Section ===== -->
+        <section class="home">
+            <h1>The Literary Junction</h1>
+            <p>Uncover the art of meaningful writing</p>
+            <button>Start Reading Now<i class="ri-arrow-right-line"></i></button>
+            <div class="hori_font">
+                <span>文</span><span>学</span><span>ジ</span><span>ャ</span><span>ン</span><span>ク</span><span>シ</span><span>ョ</span><span>ン</span>
+            </div>
+        </section>
+
+        <!-- ===== Category Section ===== -->
+        <section class="category">
+            <marquee behavior="scroll" direction="right" scrollamount="10">
+                <div class="category_list">
+                    <div class="category_item">
+                        Literature Reviews
+                    </div>
+                    <div class="category_item">
+                        Writing Tips and Advice
+                    </div>
+                    <div class="category_item">
+                        Book Recommendations
+                    </div>
+                    <div class="category_item">
+                        Author Interviews
+                    </div>
+                    <div class="category_item">
+                        Book Club Discussions
+                    </div>
+                    <div class="category_item">
+                        Poetry Corner
+                    </div>
+                    <div class="category_item">
+                        Writing Prompts
+                    </div>
+                    <div class="category_item">
+                        Literary Events and Festivals
+                    </div>
+                    <div class="category_item">
+                        Genre Spotlights
+                    </div>
+                    <div class="category_item">
+                        Personal Writing Journey
+                    </div>
+                </div>
+            </marquee>
+        </section>
+
+        <!-- ===== Recent Blog Post Section ===== -->
+        <section class="recent-posts">
+            <h2>Recent Blog Posts</h2>
+            <div class="post-list">
+                <div class="post">
+                    <div class="post_thumbnail">
+                        <img src="https://images.unsplash.com/photo-1686216941182-0f5699f4584d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=725&q=80"
+                            alt="Post 1">
+                    </div>
+                    <h3>Post Title 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="post">
+                    <div class="post_thumbnail">
+                        <img src="https://images.unsplash.com/photo-1674510891276-bd1fc1a13889?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                            alt="Post 2">
+                    </div>
+                    <h3>Post Title 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="post">
+                    <div class="post_thumbnail">
+                        <img src="https://images.unsplash.com/photo-1685743794067-ae990252216d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                            alt="Post 3">
+                    </div>
+                    <h3>Post Title 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="post">
+                    <div class="post_thumbnail">
+                        <img src="https://images.unsplash.com/photo-1685168639844-7436f7002dc4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=709&q=80"
+                            alt="Post 4">
+                    </div>
+                    <h3>Post Title 4</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
