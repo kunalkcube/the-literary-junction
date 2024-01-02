@@ -11,6 +11,9 @@
 body {
     background-image: url(assets/Purplee.jpeg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* ----- Header ----- */
@@ -215,7 +218,8 @@ form {
     border: 2px solid #2B3467;
 }
 
-form button {
+.signup_form button,
+.login_form button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -230,7 +234,8 @@ form button {
     transition: background-color 0.3s ease;
 }
 
-form button:hover {
+.signup_form button:hover,
+.login_form button:hover {
     background-color: #111947;
 }
 
@@ -530,6 +535,12 @@ marquee {
     font-size: 14px;
     color: #ffffff;
     margin-bottom: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 .post a {
@@ -583,5 +594,179 @@ marquee {
     .post a {
         padding: 2px 7px;
         font-size: 12px;
+    }
+}
+
+/* ----- Authors Section ----- */
+.authors {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 5, 34, 0.9));
+    color: #ffffff;
+}
+
+.authors h2 {
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.authors-list {
+    display: flex;
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.authors-list::-webkit-scrollbar {
+    width: 2px;
+}
+
+.authors-list::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 5, 34, 0.5));
+}
+
+.authors-list::-webkit-scrollbar-track {
+    background-color: rgba(0, 5, 34, 0.9);
+}
+
+.author-item {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 260px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.author-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.author-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 70%;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.author-item h3 {
+    font-size: 16px;
+}
+
+.author-item p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+@media (max-width: 770px) {
+    .author-item h3 {
+        font-size: 14px;
+    }
+
+    .author-item p {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    .authors-list::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* ----- Newsletter Section ----- */
+.newsletter {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.newsletter h2 {
+    font-size: 25px;
+    color: #2B3467;
+    margin-bottom: 30px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 2px rgba(0, 5, 34, 0.8);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 5, 34, 0.9));
+}
+
+.newsletter-form-input {
+    flex: 1;
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 15px;
+    font-size: 16px;
+    color: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-form-input::placeholder {
+    color: #ffffff;
+}
+
+.newsletter-form-button {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2B3467;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form-button:hover {
+    background-color: #111947;
+}
+
+@media (max-width: 770px) {
+    .newsletter-form-button {
+        font-size: 16px;
+    }
+
+    .newsletter-form-input {
+        font-size: 14px;
     }
 }
